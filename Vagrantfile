@@ -14,11 +14,11 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
 
   config.vm.box = "centos6.6"
-  config.vm.box_url = "https://github.com/tommy-muehle/vagrant-box-centos-6.6/releases/download/1.0.0/centos-6.6-x86_64.box"
+  config.vm.box_url = "https://s3-ap-northeast-1.amazonaws.com/indare-s3-bucket01/vagrant/centos66.box"
   config.vm.network :private_network, ip: "192.168.33.40", auto_config: false, virtualbox__intnet: "intnet"
 
   #変えてね！
-  config.vm.synced_folder "/Users/arino/workspace", "/home/vagrant/workspace", owner: "vagrant", group: "vagrant"
+  #config.vm.synced_folder "/Users/hoge/workspace", "/home/vagrant/workspace", owner: "vagrant", group: "vagrant"
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
